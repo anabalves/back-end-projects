@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "84abd494-d5ae-4f83-b013-9a526cb2f29e",
+		"name": "AlgaLog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "listar todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientes/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Teste10\",\r\n    \"email\": \"teste10@gmail.com\",\r\n    \"telefone\": \"(11) 91234-5678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientes/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Teste11\",\r\n  \"email\": \"teste11@gmail.com\",\r\n  \"telefone\": \"(11) 91234-5678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/clientes/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Entrega",
+			"item": [
+				{
+					"name": "listar todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/entregas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"entregas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/entregas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"entregas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "solicitar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n        \"id\": 1\r\n    },\r\n    \"destinatario\": {\r\n        \"bairro\": \"Teste do Teste\",\r\n        \"complemento\": \"Casa 7\",\r\n        \"logradouro\": \"Rua\",\r\n        \"nome\": \"Teste\",\r\n        \"numero\": \"001\"\r\n    },\r\n    \"taxa\": 12.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/entregas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"entregas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "finalizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/entregas/9/finalizacao",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"entregas",
+								"9",
+								"finalizacao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ocorrencia",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/entregas/1/ocorrencias",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"entregas",
+								"1",
+								"ocorrencias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descricao\": \"Teste Ocorrencia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/entregas/1/ocorrencias",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"entregas",
+								"1",
+								"ocorrencias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "entregaId",
+			"value": "entregaId"
+		}
+	]
+}
