@@ -40,16 +40,18 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 ### 🎲 Modelo Conceitual
 
 <p align="center">
-  <img alt="Modelo Conceitual" src="./.github/algalog.jpg" width="1000px">
+  <img alt="Modelo Conceitual" src="./.github/algalog.png" width="1000px">
 </p>
 
 ---
-
 ### 💻 Requisições
 
 [API no Heroku](https://algalog-anabalves.herokuapp.com/)
 
 [Swagger](https://algalog-anabalves.herokuapp.com/swagger-ui.html)
+
+[Postman Collection](./.github/AlgaLog.postman_collection.json)
+
 
 > A extensão [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related?hl=pt-BR) proporciona uma experiência mais agradável para visualizar os dados
 
