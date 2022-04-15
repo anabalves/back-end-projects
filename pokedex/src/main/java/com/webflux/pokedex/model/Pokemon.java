@@ -10,21 +10,23 @@ public class Pokemon {
 
     @Id
     private String id;
-    private String nome;
-    private String categoria;
-    private String habilidade;
-    private String peso;
+    private String name;
+    private String category;
+    private String ability;
+    private Double weight;
+    private Double height;
 
     public Pokemon() {
         super();
     }
 
-    public Pokemon(String id, String nome, String categoria, String habilidade, String peso) {
+    public Pokemon(String id, String name, String category, String ability, Double weight, Double height) {
         this.id = id;
-        this.nome = nome;
-        this.categoria = categoria;
-        this.habilidade = habilidade;
-        this.peso = peso;
+        this.name = name;
+        this.category = category;
+        this.ability = ability;
+        this.weight = weight;
+        this.height = height;
     }
 
     public String getId() {
@@ -35,36 +37,44 @@ public class Pokemon {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public String getHabilidade() {
-        return habilidade;
+    public String getAbility() {
+        return ability;
     }
 
-    public void setHabilidade(String habilidade) {
-        this.habilidade = habilidade;
+    public void setAbility(String ability) {
+        this.ability = ability;
     }
 
-    public String getPeso() {
-        return peso;
+    public Double getWeight() {
+        return weight;
     }
 
-    public void setPeso(String peso) {
-        this.peso = peso;
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
+
+    public Double getHeight() {
+        return height;
+    }
+
+    public void setHeight(Double height) {
+        this.height = height;
     }
 
     @Override
@@ -76,11 +86,12 @@ public class Pokemon {
     public String toString() {
         return "Pokemon{" +
                 "id='" + id + '\'' +
-                ", nome='" + nome + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", habilidade='" + habilidade + '\'' +
-                ", peso='" + peso + '\'' +
-                '}';
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", ability='" + ability + '\'' +
+                ", weight=" + weight +
+                " kg, height=" + height +
+                "m}";
     }
 
     @Override
@@ -88,12 +99,12 @@ public class Pokemon {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pokemon pokemon = (Pokemon) o;
-        return Objects.equals(id, pokemon.id) && Objects.equals(nome, pokemon.nome) && Objects.equals(categoria, pokemon.categoria) && Objects.equals(habilidade, pokemon.habilidade) && Objects.equals(peso, pokemon.peso);
+        return Objects.equals(id, pokemon.id) && Objects.equals(name, pokemon.name) && Objects.equals(category, pokemon.category) && Objects.equals(ability, pokemon.ability) && Objects.equals(weight, pokemon.weight) && Objects.equals(height, pokemon.height);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, categoria, habilidade, peso);
+        return Objects.hash(id, name, category, ability, weight, height);
     }
 
 }
