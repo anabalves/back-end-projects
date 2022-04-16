@@ -90,8 +90,8 @@ public class Pokemon {
                 ", category='" + category + '\'' +
                 ", ability='" + ability + '\'' +
                 ", weight=" + weight +
-                " kg, height=" + height +
-                "m}";
+                ", height=" + height +
+                '}';
     }
 
     @Override

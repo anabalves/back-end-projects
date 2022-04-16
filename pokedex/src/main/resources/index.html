@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server-side Events</title>
+</head>
+<body>
+    <ul></ul>
+    <script type="text/javascript">
+        if (!window.EventSource) {
+            let eventSource = new EventSource('pokemons/events'); // http:localhost:8080/index.html
+            let eventList = document.querySelector("ul");
+
+            eventSource.onmessage = function (e) {
+                let newElement = document.createElement("li");
+
+                newElement.textContent = "Event: " + e.data;
+                eventList.appendChild(newElement);
+            }
+        } else {
+            alert("O browser nao suporta esse tipo de requisicao")
+        }
+    </script>
+</body>
+</html>
