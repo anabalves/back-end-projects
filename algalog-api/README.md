@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 - Heroku
 - PostgreSQL
 - Postman
-- IntelliJ
+- IntelliJ IDEA
 - Git
 
 ---
@@ -46,9 +46,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 ---
 ### 💻 Requisições
 
-[API no Heroku](https://algalog-anabalves.herokuapp.com/)
+[API no Heroku](https://algalog-api-anabalves.herokuapp.com/)
 
-[Swagger](https://algalog-anabalves.herokuapp.com/swagger-ui.html)
+[Swagger](https://algalog-api-anabalves.herokuapp.com/swagger-ui.html)
 
 [Postman Collection](./.github/AlgaLog.postman_collection.json)
 

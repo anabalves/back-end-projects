@@ -38,7 +38,7 @@ public class SwaggerConfig {
                 .globalResponseMessage(RequestMethod.PUT, Arrays.asList(m403, m204, m422, m500))
                 .globalResponseMessage(RequestMethod.DELETE, Arrays.asList(m403, m404, m200))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.algaworks.algalog"))
+                .apis(RequestHandlerSelectors.basePackage("com.algaworks.algalog.api.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
